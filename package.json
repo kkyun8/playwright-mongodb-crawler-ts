@@ -6,7 +6,7 @@
   "scripts": {
     "play": "node index.js",
     "lint": "eslint  --fix",
-    "test": "test",
+    "test": "jest",
     "serve": "node server.js",
     "main": "npx ts-node server.ts",
     "tsc": "tsc"
@@ -29,11 +29,16 @@
     "express": "^4.17.2",
     "mongoose": "^6.2.0",
     "playwright": "^1.18.1",
-    "prettier": "^2.5.1",
-    "typescript": "^4.5.5"
+    "prettier": "^2.5.1"
   },
   "devDependencies": {
-    "ts-node": "^10.4.0"
+    "@types/jest": "^27.4.0",
+    "@types/supertest": "^2.0.11",
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2",
+    "ts-jest": "^27.1.3",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
   },
   "author": "",
   "license": "ISC"

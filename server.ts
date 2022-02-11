@@ -10,6 +10,7 @@ const port = process.env.PORT || 4500;
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 mongoose.Promise = global.Promise;
 
 const url = process.env.MONGO_URI || "url";
@@ -29,3 +30,4 @@ mongoose
 //SAMPLE ROUTERS
 app.use(routes);
 app.listen(port, () => console.log(`Server listening on port ${port}`));
+export default app

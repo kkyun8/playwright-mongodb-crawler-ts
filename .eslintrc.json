@@ -1,7 +1,8 @@
 {
   "env": {
     "node": true,
-    "es6": true
+    "es6": true,
+    "jest/globals": true
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -13,7 +14,9 @@
     "no-extra-semi": "warn",
     "quotes": ["off", "single"],
     "space-before-blocks": ["warn", { "functions": "always" }],
-    "no-undef": "warn"
+    "no-undef": "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"]
   },
-  "plugins": ["prettier"]
+  "plugins": ["prettier","@typescript-eslint"]
 }
