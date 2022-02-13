@@ -72,7 +72,11 @@ describe("Web", () => {
       .send(web)
       .set("Accept", "application/json")
       .expect("Content-Type", /json/)
-      .expect(200);
+      .expect(200)
+      .then((res) => {
+        const result: IWeb = res.body;
+        expect(result.nameJp === "1nameJp").toBe(true);
+      });
   });
   test("Delete", async () => {
     return request(app).delete("/web/name/name1").expect(200);
