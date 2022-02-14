@@ -17,6 +17,7 @@ const url = process.env.MONGO_URI || "url";
 const user = process.env.MONGO_USER;
 const pass = process.env.MONGO_PASSWORD;
 const dbName = process.env.MONGO_DBNAME;
+const isTest = process.env.NODE_ENV === "test";
 // Connect to MongoDB
 mongoose
   .connect(url, {
@@ -29,5 +30,9 @@ mongoose
 
 //SAMPLE ROUTERS
 app.use(routes);
-app.listen(port, () => console.log(`Server listening on port ${port}`));
-export default app
+
+if (!isTest) {
+  app.listen(port, () => console.log(`Server listening on port ${port}`));
+}
+
+export default app;

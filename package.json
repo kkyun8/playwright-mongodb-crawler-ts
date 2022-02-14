@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "play": "node index.js",
+    "play": "npx ts-node playwright.ts",
     "lint": "eslint  --fix",
     "test": "jest",
-    "serve": "node server.js",
-    "main": "npx ts-node server.ts",
+    "serve": "npx ts-node server.ts",
     "tsc": "tsc"
   },
   "directories": {
